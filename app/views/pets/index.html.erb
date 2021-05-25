@@ -1,0 +1,12 @@
+<div class="container col-8 mx-auto">
+  <h1>🥺 All lost pets 🥺</h1>
+
+  <% @pets.each do |pet| %>
+    <p>
+      <%= link_to pet.name, pet_path(pet) %>
+      (<%= pet.species %>) - Found <%= pet.found_days_ago %> days ago at <%= pet.address %>
+    </p>
+  <% end %>
+
+  <%= link_to "Add new pet🐶🥺", new_pet_path %>
+</div>

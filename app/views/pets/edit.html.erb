@@ -1,0 +1,14 @@
+<div class="container col-6 mx-auto">
+  <h1 class="tmy-3">Edit a lost pet!</h1>
+
+  <%= simple_form_for @pet do |f| %>
+    <%= f.input :name %>
+    <%= f.input :address %>
+    <div class="mb-3">
+      <%= f.select :species, collection: Pet::SPECIES %>
+    </div>
+    <%= f.input :found_on %>
+    <%= f.submit class: "btn btn-primary btn-block" %>
+  <% end %>
+
+</div>

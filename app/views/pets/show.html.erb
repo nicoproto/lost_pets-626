@@ -1,0 +1,8 @@
+<h1>We lost <%= @pet.name %> 🥺</h1>
+
+<p><%= @pet.name %> is a beautiful (<%= @pet.species %>), we found it <%= @pet.found_days_ago %> days ago at <%= @pet.address %>.</p>
+<%= link_to "edit pet", edit_pet_path(@pet)  %>
+
+<%= link_to "destroy pet", pet_path(@pet), method: :delete, data: { confirm: "are you sure that you found it?" }  %>
+
+<%= link_to "back to list", pets_path %>
